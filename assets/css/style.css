@@ -1,6 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+
+/* Global Reset */
 * {
   margin: 0;
   padding: 0;
-  font-family: "Poppins", sans-serif;
   box-sizing: border-box;
+  font-family: "Playfair Display", serif;
+}
+
+/* Body Styling */
+body {
+  background-color: #bbc6fa;
+}
+
+/* Quote Box Container */
+.quote-box {
+  background-color: #fff;
+  width: 100%;
+  max-width: 700px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 2.5rem;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Title Styling */
+.quote-box h2 {
+  font-size: 2rem;
+  margin-bottom: 2.5rem;
+  position: relative;
+}
+
+.quote-box h2::after {
+  content: "";
+  width: 75px;
+  height: 3px;
+  background-color: rgb(23, 124, 229);
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 3px;
+}
+
+/* Quote Text Styling */
+.quote-box blockquote {
+  font-size: 1.625rem;
+  min-height: 110px;
+  line-height: 1.4;
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+.quote-box blockquote::before,
+.quote-box blockquote::after {
+  content: '"';
+}
+
+/* Author Styling */
+.quote-box span {
+  display: block;
+  margin-top: 1rem;
+  float: right;
+  position: relative;
+  font-size: 1.1rem;
+}
+
+.quote-box span::before {
+  content: "";
+  width: 20px;
+  height: 2px;
+  background-color: rgb(23, 124, 229);
+  position: absolute;
+  top: 50%;
+  left: -30px;
+}
+
+/* Button Container */
+.quote-box div {
+  width: 100%;
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+}
+
+/* Button Styling */
+.quote-box button {
+  background-color: rgb(23, 124, 229);
+  color: #fff;
+  border-radius: 25px;
+  border: 1px solid rgb(23, 124, 229);
+  width: 150px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.quote-box button img {
+  width: 20px;
+  margin-right: 10px;
+}
+
+.quote-box button:hover {
+  background-color: #194e9f;
+}
+
+/* Secondary Button Styling */
+.quote-box button:nth-child(2) {
+  background-color: transparent;
+  color: #333;
+  border: 1px solid #333;
+}
+
+.quote-box button:nth-child(2):hover {
+  background-color: rgba(0, 0, 0, 0.05);
 }
